@@ -1,9 +1,6 @@
 import random
 import json
 
-latitude_list = []
-longitude_list = []
-
 meteorite_comp = ['stony', 'iron', 'stony-iron']
 
 sites_dict = {"sites": [ {"site_id": 1, "latitude": random.uniform(16.0,18.0), "longitude": random.uniform(82.0,84.0), "composition": random.choice(meteorite_comp)}, 
