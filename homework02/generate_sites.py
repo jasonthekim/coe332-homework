@@ -19,9 +19,6 @@ with open('sites.json', 'w') as out:
     json.dump(sites_dict, out, indent=2)
 
 
-for i in range(5):
-    latitude_list.append(random.uniform(16.0,18.0))
-    longitude_list.append(random.uniform(82.0,84.0))
 
 
 
