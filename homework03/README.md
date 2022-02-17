@@ -12,6 +12,15 @@ The first python script, analyze_data.py, calculates the average turbidity based
 
 The second python script, test_analyze_data.py, imports pytest to run tests on the two functions, calculate_turbidity and minimum_time_threshold, from the first python script. It performs simple sanity checks that the math is correct, checks types returned and exceptions thrown what are expected.
 
-As for running the code, it is important to have created a JSON file containing the turbidity data set before running the first python script, analyze_turbidity.py so that it can import and read the JSON data. Thereafter, are we able to run the test script to make sure the functions work properly.  
+As for running the code, it is important to have created a JSON file containing the turbidity data set before running the first python script, analyze_turbidity.py so that it can import and read the JSON data. Thereafter, are we able to run the test script to make sure the functions work properly. In interpreting the results, the analyze_turbidity.py script will output similar to one of the following two code blocks:
+   
+    Average turbidity based on most recent five measurements = 1.1992 NTU
+    Warning: Turbidity is above threshold for safe use
+    Minimum time required to return below a safe threshold = 8.99 hours 	  
 
+    Average turbidity based on most recent five measurements = 0.9852 NTU
+    Info: Turbidity is below threshold for safe use
+    Minimum time required to return below a safe threshold = 0 hours
+
+where it shows the average turbidity (in NTU units & rounded to four decimal places), a warning or info message stating whether the water is safe, and the minimum time required to return below a safe threshold, respectively. 
 
