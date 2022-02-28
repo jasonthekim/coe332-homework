@@ -61,6 +61,7 @@ In interpreting the output, the output shows the average mass of all 30 meteors 
    - docker run --rm <username>/ml_data_analysis:<version> pytest /code/
 
 Expected output:
+    [isp02]$ docker run --rm <username>/ml_data_analysis:<version> pytest /code/
     ============================= test session starts ==============================
     platform linux -- Python 3.6.8, pytest-7.0.0, pluggy-1.0.0
     rootdir: /code
