@@ -33,6 +33,7 @@ Dockerfile:
    - ml_data_analysis /code/Meteorite_Landings.json
 
 Expected output:
+
     Average mass of 30 meteor(s):
     83857.3 grams
 
@@ -61,7 +62,7 @@ In interpreting the output, the output shows the average mass of all 30 meteors 
    - docker run --rm <username>/ml_data_analysis:<version> pytest /code/
 
 Expected output:
-    [isp02]$ docker run --rm <username>/ml_data_analysis:<version> pytest /code/
+
     ============================= test session starts ==============================
     platform linux -- Python 3.6.8, pytest-7.0.0, pluggy-1.0.0
     rootdir: /code
@@ -77,36 +78,37 @@ In interpreting the pytest output, the fourth line shows how many function tests
 It is important to note that the input data should cater to the ml_data_analysis.py script. The input data should have a list of dictionaries, with each dict containing same set of key(s). 
 
 Example of proper input data:
-    {
-      "meteorite_landings": [
+
         {
-          "name": "Ruiz",
-          "id": "10001",
-          "recclass": "L5",
-          "mass (g)": "21",
-          "reclat": "50.775",
-          "reclong": "6.08333",
-          "GeoLocation": "(50.775, 6.08333)"
-        },
-        {
-          "name": "Beeler",
-          "id": "10002",
-          "recclass": "H6",
-          "mass (g)": "720",
-          "reclat": "56.18333",
-          "reclong": "10.23333",
-          "GeoLocation": "(56.18333, 10.23333)"
-        },
-        {
-          "name": "Brock",
-          "id": "10003",
-          "recclass": "EH4",
-          "mass (g)": "107000",
-          "reclat": "54.21667",
-          "reclong": "-113",
-          "GeoLocation": "(54.21667, -113.0)"
-        },
-    etc...
+          "meteorite_landings": [
+            {
+              "name": "Ruiz",
+              "id": "10001",
+              "recclass": "L5",
+              "mass (g)": "21",
+              "reclat": "50.775",
+              "reclong": "6.08333",
+              "GeoLocation": "(50.775, 6.08333)"
+            },
+            {
+              "name": "Beeler",
+              "id": "10002",
+              "recclass": "H6",
+              "mass (g)": "720",
+              "reclat": "56.18333",
+              "reclong": "10.23333",
+              "GeoLocation": "(56.18333, 10.23333)"
+            },
+            {
+              "name": "Brock",
+              "id": "10003",
+              "recclass": "EH4",
+              "mass (g)": "107000",
+              "reclat": "54.21667",
+              "reclong": "-113",
+              "GeoLocation": "(54.21667, -113.0)"
+            },
+        etc...
 
 To analyze a different set of Meteorite Landings data:
 1. Download the data by either clicking [this link](https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json) and copy/paste into a json file, or typing this into the command line:
