@@ -65,10 +65,10 @@ Expected output:
     platform linux -- Python 3.6.8, pytest-7.0.0, pluggy-1.0.0
     rootdir: /code
     collected 3 items
-    
+
     code/test_ml_data_analysis.py ...                                        [100%]
-    
-    ============================== 3 passed in 0.04s ===============================
+
+    ============================== 3 passed in 0.06s ===============================
 
 In interpreting the pytest output, the fourth line shows how many function tests were collected, the line after shows which test script it tested, and the last line ultimately shows whether all tests passed. 
     
