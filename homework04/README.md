@@ -23,14 +23,14 @@ Dockerfile:
 ## _How to run code in order_
 
 1. Pull and use existing image on Docker Hub by typing in command line:
-    docker pull jasonthekim/ml_data_analysis:hw04
+   - docker pull jasonthekim/ml_data_analysis:hw04
 
 2. Build an image from my Dockerfile by typing in command line:
-    docker build -t <username>/ml_data_analysis:<version> .
+   - docker build -t <username>/ml_data_analysis:<version> .
 
 3. Run the containerized code against the sample data inside the container by typing in command line(the first line gets user into container; second runs the code against the data):
-    docker run --rm -it <username>/ml_data_analysis:<version> /bin/bash
-    ml_data_analysis /code/Meteorite_Landings.json
+   - docker run --rm -it <username>/ml_data_analysis:<version> /bin/bash
+   - ml_data_analysis /code/Meteorite_Landings.json
 
 Expected output:
     Average mass of 30 meteor(s):
@@ -54,11 +54,11 @@ Expected output:
 In interpreting the output, the output shows the average mass of all 30 meteors in the dataset, the amount of meteors in each hemisphere, and lastly the amount of meteors found in each class.
 
 4. Run the containerized code against the user-provided data:
-    docker run --rm -it -v $PWD:/data username/ml_data_analysis:1.0 /bin/bash
-    ml_data_analysis.py /data/<user-provided data file name>
+   - docker run --rm -it -v $PWD:/data username/ml_data_analysis:1.0 /bin/bash
+   - ml_data_analysis.py /data/<user-provided data file name>
 
 5. Run the containerized test suite with pytest:
-    docker run --rm <username>/ml_data_analysis:<version> pytest /code/
+   - docker run --rm <username>/ml_data_analysis:<version> pytest /code/
 
 Expected output:
     ============================= test session starts ==============================
