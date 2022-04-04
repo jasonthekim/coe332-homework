@@ -2,6 +2,10 @@
 
 ## Instructions to Launch the Redis Database:
 1. Log onto ISP server and type into the command line: `docker run -v $(pwd)/data:/data -p <flask port>:6379 -d --name <name>-redis redis:6 --save 1 1`
+    - It is important to add the `-d` flag, as it allows for it start in the background (detached or daemon mode). 
+    - The `-v` flag performs a bind mount which is a way of replacing a file or directory in a container image with a file or directory on the host file system in a running container.
+    - The `--save 1 1` configures the data base server to save to 1 backup file every 1 second - all in order to persist the data across redis containers.
+
 
 ## Instructions to Pull/Build/Launch Flask App:
 1. On the ISP/TACC server, to create Dockerfile, type in command line: `touch Dockerfile`
@@ -71,5 +75,5 @@ Sample of data:
   }
  
 ```
-The data includes a person's name, presumable one who's analyzed the landing, its ID, class, mass of the meteorite in grams, and geolocation in latitude and longitude. 
+The data includes a person's name, presumably one who's analyzed the landing, its ID, class, mass of the meteorite in grams, and geolocation in latitude and longitude. 
 
