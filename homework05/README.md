@@ -1,7 +1,7 @@
 # Combining Redis and Flask
 
 ## Description of Project:
-Data persistance holds great importance in today's world. Thus, a database server, like Redis, is a critical addition to our applications. In this project, we launch a Redis container, thereby building a Flask application that loads data into and retrieve datafrom Redis - allowing us to learn about how Flask and Redis mesh well together in persisting data. 
+Data persistance holds great importance in today's world. Thus, a database server, like Redis, is a critical addition to our applications. In this project, we launch a Redis container, thereby building a Flask application that loads data into and retrieve data from Redis - allowing us to learn about how Flask and Redis mesh well together in persisting data. 
 
 ## Instructions to Launch the Redis Database:
 1. Log onto ISP server and type into the command line: `docker run -v $(pwd)/data:/data -p <flask port>:6379 -d --name <name>-redis redis:6 --save 1 1`
