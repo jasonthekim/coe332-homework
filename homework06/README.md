@@ -21,7 +21,7 @@ The objective of this project is to deploy the Flask application from homework 0
 
 - Find the IP address of your Flask service through:
 ```
-kubectl get services
+$ kubectl get services
 NAME                          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 kasonjim-test-flask-service   ClusterIP   10.106.43.168   <none>        5000/TCP   4h39m
     - The IP address should be under "CLUSTER-IP". Keep note of this address.
@@ -51,12 +51,14 @@ spec:
           command: ['sleep', '999999999']
 ```
 - Then run these commands:
-`kubectl apply -f <python-debug-file-name>.yml`
-`kubectl exec -it <python-debug-ID> /bin/bash`
+```
+kubectl apply -f <python-debug-file-name>.yml
+kubectl exec -it <python-debug-ID> /bin/bash`
+```
 
 - You can look up the python-debug-ID by this command (check under "NAME"):
 ```
-kubectl get pods
+$ kubectl get pods
 NAME                                        READY   STATUS             RESTARTS       AGE
 ...
 py-debug-deployment-5dfcf7bdd9-k7hxw        1/1     Running            0              3h20m
