@@ -24,9 +24,8 @@ The objective of this project is to deploy the Flask application from homework 0
 kubectl get services
 NAME                          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 kasonjim-test-flask-service   ClusterIP   10.106.43.168   <none>        5000/TCP   4h39m
-```
     - The IP address should be under "CLUSTER-IP". Keep note of this address.
-
+```
 - Now exec into a Python debug container. First, you must create a .yml file containing the following:
 ```
 ---
@@ -51,9 +50,10 @@ spec:
           image: python:3.9
           command: ['sleep', '999999999']
 ```
-Then run these commands:
+- Then run these commands:
 `kubectl apply -f <python-debug-file-name>.yml`
 `kubectl exec -it <python-debug-ID> /bin/bash`
+
 - You can look up the python-debug-ID by this command (check under "NAME"):
 ```
 kubectl get pods
@@ -97,6 +97,8 @@ curl 10.106.43.168:5000/data
  },
 
 ```
-- The first command loads in the data.
-- The second command reads the data. 
+The first command loads in the data.
+
+The second command reads the data. 
+
 The data includes a person's name, presumably one who's analyzed the landing, its ID, class, mass of the meteorite in grams, and geolocation in latitude and longitude.
