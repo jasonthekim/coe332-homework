@@ -4,30 +4,30 @@
 The objective of this project is to deploy the Flask application from homework 05 to the Kubernetes cloud - to create a "test" environment for our Flask application. In addition to the files from homework 05, the new files include .yml files through which k8s objects are created.
 
 ## Instructions on Running Application on Kubernetes:
-Log onto isp02 through this command:
-`ssh <username>@isp02.tacc.utexas.edu`
+- Log onto isp02 through this command:
+    `ssh <username>@isp02.tacc.utexas.edu`
 
-Thereafter, log onto a Kubernetes cluster through this command:
-`ssh <username>@coe332-k8s.tacc.cloud
+- Thereafter, log onto a Kubernetes cluster through this command:
+    `ssh <username>@coe332-k8s.tacc.cloud`
 
-Clone the respective git repository and acquire files from coe332/homework05. 
+- Clone the respective git repository and acquire files from coe332/homework05. 
 
-Start all .yml files through this command:
+- Start all .yml files through this command:
 `kubectl apply -f <filename>.yml`
-- Note: You must do it for each individual file.
+    - Note: You must do it for each individual file.
 
-To ensure everything is running and to check for IDs, use this command:
+- To ensure everything is running and to check for IDs, use this command:
 `kubectl get all -o wide`
 
-Find the IP address of your Flask service through:
+- Find the IP address of your Flask service through:
 ```
 kubectl get services
 NAME                          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
 kasonjim-test-flask-service   ClusterIP   10.106.43.168   <none>        5000/TCP   4h39m
 ```
-- The IP address should be under "CLUSTER-IP". Keep note of this address.
+    - The IP address should be under "CLUSTER-IP". Keep note of this address.
 
-Now exec into a Python debug container. First, you must create a .yml file containing the following:
+- Now exec into a Python debug container. First, you must create a .yml file containing the following:
 ```
 ---
 apiVersion: apps/v1
