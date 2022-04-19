@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kasonjim-test-deployment
+  labels:
+    app: kasonjim-test-redis
+    username: kasonjim
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kasonjim-test-redis
+  template:
+    metadata:
+      labels:
+        app: kasonjim-test-redis
+        username: pavan99
+        env: test
+    spec:
+      containers:
+        - name: kasonjim-test
+          imagePullPolicy: Always
+          image: redis:6
+          volumeMounts:
+          - name: kasonjim-test-data
+            mountPath: "/data"
+      volumes:
+      - name: kasonjim-test-data
+        persistentVolumeClaim:
+          claimName: kasonjim-test-data
