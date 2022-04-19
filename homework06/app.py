@@ -13,7 +13,7 @@ def read_data():
     Returns:
     List of dicts (list): Info on meteorite landings data
     """
-    rd = redis.Redis(host='172.17.0.18', port=6379)
+    rd = redis.Redis(host='10.102.31.75', port=6379)
     
     if request.method == 'POST':
         with open('ML_Data_Sample.json', 'r') as f:

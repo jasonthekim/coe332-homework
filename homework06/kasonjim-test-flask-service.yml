@@ -11,6 +11,6 @@ spec:
   selector:
     app: kasonjim-test-flask
   ports:
-  - name: helloflask
+  - name: kasonjim-test-flask
     port: 5000
     targetPort: 5000

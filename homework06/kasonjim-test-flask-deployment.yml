@@ -18,7 +18,7 @@ spec:
       containers:
         - name: kasonjim-test-flask
           imagePullPolicy: Always
-          image: kasonjim/hw05:latest
+          image: jasonthekim/hw05:latest
           env:
           - name: FLASK_APP
             value: "app.py"
