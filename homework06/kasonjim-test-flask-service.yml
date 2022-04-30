@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kasonjim-test-flask-service
+  labels:
+    username: kasonjim
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: kasonjim-test-flask
+  ports:
+  - name: kasonjim-test-flask
+    port: 5000
+    targetPort: 5000
