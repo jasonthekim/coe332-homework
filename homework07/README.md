@@ -18,4 +18,4 @@ flask run -p 5000
 - Furthemore, the orange boxes list all the epochs or countries, and the purple boxes return specific info about the desired country/region/city.
 
 ### Citation (Link to Midterm Project)
-You may access the Midterm Project through [this link](https://github.com/jasonthekim/SimplificationOfISS) 
+You may access the Midterm Project by clicking on [this link](https://github.com/jasonthekim/SimplificationOfISS) 
