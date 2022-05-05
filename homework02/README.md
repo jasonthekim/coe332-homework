@@ -1,4 +1,4 @@
-Robotic Vehicle on Mars
+# Robotic Vehicle on Mars
 
 The project's objective is to simulate a robotic vehicle on Mars investigating five meteorite landing sites. The folder contains two python scripts and a json file (generated from the first python script) that obtains the objective. 
 
